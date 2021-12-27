@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 class MyController extends Controller
 {
     public function login() {
-        return 'Ввод email';
-        return 'Ввод пароль';
+        return 'Ввод email, пароль';
     }
     public function registration() {
-        return 'Ввод email';
-        return 'Ввод ФИО';
-        return 'Ввод серия номер';
-        return 'Вывод пароль';
+        return 'Ввод email, ФИО, серия, номер';
     }
     public function page() {
         return 'вся информация о пользователе';
