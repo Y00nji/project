@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class MyController extends Controller
 {
     public function login() {
-        return 'Ввод email, пароль';
+        return view(view:'SingIn');
     }
     public function registration() {
         return 'Ввод email, ФИО, серия, номер';
