@@ -14,15 +14,15 @@ class CreateабитуриентыTable extends Migration
     public function up()
     {
         Schema::create('абитуриенты', function (Blueprint $table) {
-            $table->idабитуриента();
+            $table->increments('idАбитуриента');
             $table->string('Фамилия');
             $table->string('Имя');
             $table->string('Отчество');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+             $table->timestamp('email_verified_at')->nullable();
             $table->string('Пароль');
             $table->rememberToken();
-            $table->timestamps();
+             $table->timestamps();
         });
     }
 

@@ -12,6 +12,7 @@ class абитуриент extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $table='абитуриенты';
+    protected $primaryKey = 'idАбитуриента';
 
     /**
      * The attributes that are mass assignable.
@@ -19,8 +20,10 @@ class абитуриент extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'Имя',
+        'Фамилия',
         'email',
-        'пароль',
+        'Пароль',
     ];
 
     /**
