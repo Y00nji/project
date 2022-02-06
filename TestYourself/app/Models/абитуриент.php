@@ -32,7 +32,7 @@ class абитуриент extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'пароль',
+        'Пароль',
         'remember_token',
     ];
 

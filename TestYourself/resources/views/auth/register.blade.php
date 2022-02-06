@@ -15,7 +15,7 @@
                             <label for="Имя" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Имя" type="text" class="form-control @error('Имя') is-invalid @enderror" name="Имя" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="Имя" type="text" class="form-control @error('Имя') is-invalid @enderror" name="Имя" value="{{ old('Имя') }}" required autocomplete="name" autofocus>
 
                                 @error('Имя')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <label for="Фамилия" class="col-md-4 col-form-label text-md-end">{{ __('Фамилия') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Фамилия" type="text" class="form-control @error('Фамилия') is-invalid @enderror" name="Фамилия" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
+                                <input id="Фамилия" type="text" class="form-control @error('Фамилия') is-invalid @enderror" name="Фамилия" value="{{ old('Фамилия') }}" required autocomplete="lastname" autofocus>
 
                                 @error('Фамилия')
                                     <span class="invalid-feedback" role="alert">
@@ -43,7 +43,7 @@
                             <label for="Отчество" class="col-md-4 col-form-label text-md-end">{{ __('Отчество') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Отчество" type="text" class="form-control @error('Отчество') is-invalid @enderror" name="Отчество" value="{{ old('Отчество') }}" required autocomplete="Отчество" autofocus>
+                                <input id="Отчество" type="text" class="form-control @error('Отчество') is-invalid @enderror" name="Отчество" value="{{ old('Отчество') }}" required autocomplete="secondname" autofocus>
 
                                 @error('Отчество')
                                     <span class="invalid-feedback" role="alert">
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Пароль') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">

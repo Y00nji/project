@@ -17,7 +17,7 @@ class CreateабитуриентыTable extends Migration
             $table->increments('idАбитуриента');
             $table->string('Фамилия');
             $table->string('Имя');
-            $table->string('Отчество');
+            $table->string('Отчество')->default(NULL);
             $table->string('email')->unique();
              $table->timestamp('email_verified_at')->nullable();
             $table->string('Пароль');
