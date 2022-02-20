@@ -12,12 +12,12 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="Имя" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
+                            <label for="Фамилия" class="col-md-4 col-form-label text-md-end">{{ __('Фамилия') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Имя" type="text" class="form-control @error('Имя') is-invalid @enderror" name="Имя" value="{{ old('Имя') }}" required autocomplete="name" autofocus>
+                                <input id="Фамилия" type="text" class="form-control @error('Фамилия') is-invalid @enderror" name="Фамилия" value="{{ old('Фамилия') }}" required autocomplete="on" autofocus>
 
-                                @error('Имя')
+                                @error('Фамилия')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -26,12 +26,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="Фамилия" class="col-md-4 col-form-label text-md-end">{{ __('Фамилия') }}</label>
+                            <label for="Имя" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Фамилия" type="text" class="form-control @error('Фамилия') is-invalid @enderror" name="Фамилия" value="{{ old('Фамилия') }}" required autocomplete="on" autofocus>
+                                <input id="Имя" type="text" class="form-control @error('Имя') is-invalid @enderror" name="Имя" value="{{ old('Имя') }}" required autocomplete="name" autofocus>
 
-                                @error('Фамилия')
+                                @error('Имя')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Повторите пароль') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -92,7 +92,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Регистрация') }}
                                 </button>
                             </div>
                         </div>
