@@ -11,7 +11,63 @@
 
 <div id="my_page" class="tabcontent">
   <h3> Моя страница</h3>
-  <p>Твое хмурое личико</p>
+    <p>
+      <div class="row mb-3">
+            <label for="Фамилия" class="col-md-4 col-form-label text-md-end">{{ __('Фамилия') }}</label>
+
+            <div class="col-md-6">
+                <input id="Фамилия" type="text" class="form-control @error('Фамилия') is-invalid @enderror" name="Фамилия" value="{{ Auth::user()->Фамилия }}" required autocomplete="on" autofocus>
+
+                @error('Фамилия')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Имя" class="col-md-4 col-form-label text-md-end">{{ __('Имя') }}</label>
+
+            <div class="col-md-6">
+                <input id="Имя" type="text" class="form-control @error('Имя') is-invalid @enderror" name="Имя" value="{{ Auth::user()->Имя }}" required autocomplete="on" autofocus>
+
+                @error('Имя')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Отчество" class="col-md-4 col-form-label text-md-end">{{ __('Отчество') }}</label>
+
+            <div class="col-md-6">
+                <input id="Отчество" type="text" class="form-control @error('Отчество') is-invalid @enderror" name="Отчество" value="{{ Auth::user()->Отчество }}" autocomplete="on" autofocus>
+
+                @error('Отчество')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('E-Mail') }}</label>
+
+            <div class="col-md-6">
+                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ Auth::user()->email }}" required autocomplete="on" disabled autofocus>
+
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+    </p>
 </div>
 
 <div id="book" class="tabcontent">

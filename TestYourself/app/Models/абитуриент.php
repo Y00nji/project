@@ -22,6 +22,7 @@ class абитуриент extends Authenticatable
     protected $fillable = [
         'Имя',
         'Фамилия',
+        'Отчество',
         'email',
         'Пароль',
     ];
