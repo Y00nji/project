@@ -67,6 +67,29 @@
                 @enderror
             </div>
         </div>
+
+        <div class="row mb-3">
+            <label for="Пол" class="col-md-4 col-form-label text-md-end">{{ __('Пол') }}</label>
+
+            <div class="col-md-6">
+                <select class="form-select" id="Пол" value="{{ Auth::user()->Пол }}" required>
+                    <option>Не указан</option>
+                    <option>М</option>
+                    <option>Ж</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Гражданство" class="col-md-4 col-form-label text-md-end">{{ __('Гражданство') }}</label>
+
+            <div class="col-md-6">
+                <select class="form-select" id="Гражданство" value="{{ Auth::user()->Гражданство }}" required autocomplete="on" disabled autofocus>
+                    <option>Не указано</option>
+                    
+                </select>
+            </div>
+        </div>
     </p>
 </div>
 
@@ -84,10 +107,6 @@
   <h3>Статистика</h3>
   <p>У тебя 0/100, смирись</p>
 </div>
-
-<button type="submit" class="btn button">
-    {{ __('Выход') }}
-</button>
 
 <!-- <div class="container">
     <div class="row justify-content-center">
