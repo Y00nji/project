@@ -34,7 +34,7 @@ class абитуриент extends Authenticatable
      */
     protected $hidden = [
         'Пароль',
-        'remember_token',
+        // 'remember_token',
     ];
 
     /**

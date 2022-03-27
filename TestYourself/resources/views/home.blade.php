@@ -81,13 +81,57 @@
         </div>
 
         <div class="row mb-3">
+            <label for="Дата_рождения" class="col-md-4 col-form-label text-md-end">{{ __('Дата рождения') }}</label>
+
+            <div class="col-md-6">
+                <p><input class="form-select" id="Дата_рождения" type="date" value="{{ Auth::user()->Дата_рождения }}" name="Дата_рождения" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}"></p>
+            </div>
+        </div>
+
+        <div class="row mb-3">
             <label for="Гражданство" class="col-md-4 col-form-label text-md-end">{{ __('Гражданство') }}</label>
 
             <div class="col-md-6">
-                <select class="form-select" id="Гражданство" value="{{ Auth::user()->Гражданство }}" required autocomplete="on" disabled autofocus>
-                    <option>Не указано</option>
+                <select class="form-select" id="Гражданство" value="{{ Auth::user()->Гражданство }}">
+                @foreach($Гражданство as $гражданство_список)
+                    <option value="{{ $гражданство_список->idГражданство }}">{{ $гражданство_список->Гражданство }}</option>
+                @endforeach
                     
                 </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Вид_удостоверения" class="col-md-4 col-form-label text-md-end">{{ __('Вид удостоверения') }}</label>
+
+            <div class="col-md-6">
+                <select class="form-select" id="Вид_удостоверения" value="{{ Auth::user()->Вид_удостоверения }}">
+                    <option>Не указан</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Серия_паспорта" class="col-md-4 col-form-label text-md-end">{{ __('Серия паспорта') }}</label>
+
+            <div class="col-md-6">
+                <input id="Серия_паспорта" type="text" class="form-control" name="Серия_паспорта" value="{{ Auth::user()->Серия_паспорта }}">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Номер_паспорта" class="col-md-4 col-form-label text-md-end">{{ __('Номер паспорта') }}</label>
+
+            <div class="col-md-6">
+                <input id="Номер_паспорта" type="text" class="form-control" name="Номер_паспорта" value="{{ Auth::user()->Номер_паспорта }}">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="Кем_выдан_паспорт" class="col-md-4 col-form-label text-md-end">{{ __('Кем выдан паспорт') }}</label>
+
+            <div class="col-md-6">
+                <input id="Кем_выдан_паспорт" type="text" class="form-control" name="Кем_выдан_паспорт" value="{{ Auth::user()->Кем_выдан_паспорт }}">
             </div>
         </div>
     </p>
@@ -151,4 +195,5 @@
     evt.currentTarget.className += " active";
 }
 </script>
+
 @endsection
