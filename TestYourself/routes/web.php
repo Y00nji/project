@@ -23,5 +23,8 @@ Route::group(['middleware' => ['auth']], function() {
     */
     Route::get('logout', 'LogoutController@perform')->name('logout.perform');
  });
- Route::get('/home', [App\Http\Controllers\ГражданствоController::class, 'Гражданство']);
-//  Route::get('/home', [App\Http\Controllers\ГражданствоController::class, 'Гражданство']); это будет вид уд
+Route::get('/home', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
+Route::get('/', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
+
+
+

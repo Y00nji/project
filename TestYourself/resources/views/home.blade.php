@@ -92,9 +92,9 @@
             <label for="Гражданство" class="col-md-4 col-form-label text-md-end">{{ __('Гражданство') }}</label>
 
             <div class="col-md-6">
-                <select class="form-select" id="Гражданство" value="{{ Auth::user()->Гражданство }}">
-                @foreach($Гражданство as $гражданство_список)
-                    <option value="{{ $гражданство_список->idГражданство }}">{{ $гражданство_список->Гражданство }}</option>
+                <select class="form-select" id="Гражданство" >
+                @foreach($Гражданство_список as $Гражданство)
+                    <option value="{{ $Гражданство->idГражданство }}">{{ $Гражданство->Гражданство }}</option>
                 @endforeach
                     
                 </select>
@@ -105,8 +105,11 @@
             <label for="Вид_удостоверения" class="col-md-4 col-form-label text-md-end">{{ __('Вид удостоверения') }}</label>
 
             <div class="col-md-6">
-                <select class="form-select" id="Вид_удостоверения" value="{{ Auth::user()->Вид_удостоверения }}">
-                    <option>Не указан</option>
+                <select class="form-select" id="Вид_удостоверения" >
+                @foreach($Виды_удостоверений_список as $Вид_удостоверения)
+                    <option value="{{ $Вид_удостоверения->idВид_удостоверения }}">{{ $Вид_удостоверения->Вид_удостоверения }}</option>
+                @endforeach
+                    
                 </select>
             </div>
         </div>
