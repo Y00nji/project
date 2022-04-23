@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('auth.login');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth']], function() {
     /**
@@ -24,7 +25,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('logout', 'LogoutController@perform')->name('logout.perform');
  });
 Route::get('/home', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
-Route::get('/', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
+// Route::get('/', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
 
 
 
