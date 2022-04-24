@@ -138,6 +138,24 @@
                 <input id="Кем_выдан_паспорт" type="text" class="form-control" name="Кем_выдан_паспорт" value="{{ Auth::user()->Кем_выдан_паспорт }}">
             </div>
         </div>
+
+        <div class="row mb-3">
+            <label for="Дата_выдачи_паспорта" class="col-md-4 col-form-label text-md-end">{{ __('Дата выдачи паспорта') }}</label>
+
+            <div class="col-md-6">
+                <input id="Дата_выдачи_паспорта" type="text" class="form-control" name="Дата_выдачи_паспорта" value="{{ Auth::user()->Дата_выдачи_паспорта }}">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="СНИЛС" class="col-md-4 col-form-label text-md-end">{{ __('СНИЛС') }}</label>
+
+            <div class="col-md-6">
+                <input id="СНИЛС" type="text" class="form-control" name="СНИЛС" value="{{ Auth::user()->СНИЛС }}">
+            </div>
+        </div>
+
+        
     </p>
 </div>
 
