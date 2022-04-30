@@ -161,17 +161,23 @@
 
 <div id="book" class="tabcontent">
   <h3>Подготовка</h3>
-  <p>Выучи это и будет тебе счастиё</p>
+  <p>Материал а</p>
+  <p>Материал б</p>
+  <p>Материал в</p>
 </div>
 
 <div id="tests" class="tabcontent">
   <h3>Тесты</h3>
-  <p>Рискни</p>
+  <p>тест а</p>
+  <p>тест б</p>
+  <p>тест в</p>
 </div>
 
 <div id="statistics" class="tabcontent">
   <h3>Статистика</h3>
-  <p>У тебя 0/100, смирись</p>
+  <p>тест а: 12/100</p>
+  <p>тест б: 66/100</p>
+  <p>тест в: не пройден</p>
 </div>
 
 <div class="modal-footer">
