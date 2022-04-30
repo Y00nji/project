@@ -27,5 +27,7 @@ Route::group(['middleware' => ['auth']], function() {
 Route::get('/home', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
 // Route::get('/', [App\Http\Controllers\ВыборкаБазыController::class, 'ВыборкаБазы']);
 
+Route::get('update', [App\Http\Controllers\HomeController::class, 'update'])->name('update_абитуриент');
+
 
 

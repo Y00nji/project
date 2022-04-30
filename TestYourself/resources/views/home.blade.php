@@ -92,7 +92,7 @@
             <label for="Гражданство" class="col-md-4 col-form-label text-md-end">{{ __('Гражданство') }}</label>
 
             <div class="col-md-6">
-                <select class="form-select" id="Гражданство" >
+                <select class="form-select" id="Гражданство" value="{{ Auth::user()->Гражданство }}" name="Гражданство">
                 @foreach($Гражданство_список as $Гражданство)
                     <option value="{{ $Гражданство->idГражданство }}">{{ $Гражданство->Гражданство }}</option>
                 @endforeach
@@ -174,25 +174,32 @@
   <p>У тебя 0/100, смирись</p>
 </div>
 
-<!-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+<div class="modal-footer">
+    <button type="button" id="save" class="btn btn-primary">Сохранить</button>
+</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<script>
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
+$(function() {
+$('#save').on('click',function(){
+var idАбитуриента = "{{ Auth::user()->idАбитуриента }}";
+var Фамилия = $('#Фамилия').val();
+var Имя = $('#Имя').val();
+var Отчество = $('#Отчество').val();
+$.ajax({
+url: "{{ route('update_абитуриент')}}",
+type: "GET",
+data: {idАбитуриента:idАбитуриента,Фамилия:Фамилия,Имя:Имя,Отчество:Отчество},
+success: function (data) {
+                       alert("Данные успешно сохранены");
+                       location.reload();
+}
+});
+});
+})
+
+</script>
+
 <script>
     openCity(event, 'my_page');
 

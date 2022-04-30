@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\абитуриент;
 
 use Illuminate\Http\Request;
 
@@ -26,4 +27,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function update(Request $request) {
+        $абитуриент = абитуриент::find($request->idАбитуриента);
+     
+        $абитуриент->Фамилия = $request->Фамилия;     
+        $абитуриент->Имя = $request->Имя;
+        $абитуриент->Отчество = $request->Отчество;
+         $абитуриент->update();
+        return redirect()->back();
+      }
     }
